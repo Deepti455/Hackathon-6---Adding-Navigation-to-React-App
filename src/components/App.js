@@ -9,10 +9,10 @@ class App extends Component {
         return(
             <BrowserRouter>
             <div id="main">
-            <Link to="/home">HOME/</Link>
+            <Link to="/">HOME/</Link>
             <Link to="/about">ABOUT</Link>
             <Switch>
-                <Route path='/home'>
+                <Route exact path='/'>
                     <Home />
                 </Route>
                 <Route path='/about'>
