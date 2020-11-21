@@ -12,10 +12,13 @@ import {useLocation, withRouter} from 'react-router-dom';
 //         </>
 //     }
 // }
-export default function Home(){
+function LocationDisplay(){
     let location=useLocation();
+    return <div data-testid="location-display">{location.pathname}</div>
+}
+export default function Home(){
     return <>
-        <div data-testid="location-display">{location.pathname}</div>
+        <LocationDisplay/>
         <div style={{backgroundColor: 'orange', width: "100%", height: "500px"}}>You are home.</div>
         </>
 }

@@ -10,11 +10,14 @@ import { useLocation } from 'react-router-dom';
 //         return <div style={{backgroundColor: 'green', width: "100%", height: "500px"}}>You are on the about page.{location.pathname}</div>
 //     }
 // }
-
-export default function About(){
+function LocationDisplay(){
     let location=useLocation();
+    return <div data-testid="location-display">{location.pathname}</div>
+}
+export default function About(){
+    
     return <>
-        <div data-testid="location-display">{location.pathname}</div>
+        <LocationDisplay/>
         <div style={{backgroundColor: 'green', width: "100%", height: "500px"}}>You are on the about page.</div>
         </>
 }
