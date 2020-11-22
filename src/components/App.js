@@ -1,5 +1,5 @@
 import React, {Component, useState} from "react";
-import {BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import {HashRouter, Link, Route, Switch } from 'react-router-dom';
 import Home from './Home.js';
 import About from './About.js';
 import '../styles/App.css';
@@ -10,7 +10,7 @@ export default class App extends Component {
     }
     render() {
         return(
-            <BrowserRouter>
+            <HashRouter>
             <div id="main">
             <Link to="/">HOME/</Link>
             <Link to="/about">ABOUT</Link>
@@ -21,9 +21,12 @@ export default class App extends Component {
                 <Route path='/about'>
                     <About />
                 </Route>
+                {/* <Route path="/*">
+                    No match
+                </Route> */}
             </Switch>
             </div>
-            </BrowserRouter>
+            </HashRouter>
         )
         
     }
