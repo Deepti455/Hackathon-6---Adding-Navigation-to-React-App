@@ -33,7 +33,6 @@ export default class App extends Component {
     }
     render() {
         return(
-            <BrowserRouter>
             <div id="main">
             <Link to="/">HOME/</Link>
             <Link to="/about">ABOUT</Link>
@@ -49,7 +48,6 @@ export default class App extends Component {
                 </Route>
             </Switch>
             </div>
-            </BrowserRouter>
         )
         
     }
