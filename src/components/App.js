@@ -12,14 +12,14 @@ function LocationDisplay(){
 }
 export function Home(){
     return <>
-        <LocationDisplay/>
+        {/* <LocationDisplay/> */}
         <div style={{backgroundColor: 'orange', width: "100%", height: "500px"}}>You are home.</div>
         </>
 }
 export function About(){
     
     return <>
-        <LocationDisplay/>
+        {/* <LocationDisplay/> */}
         <div style={{backgroundColor: 'green', width: "100%", height: "500px"}}>You are on the about page.</div>
         </>
 }
@@ -33,14 +33,17 @@ export default class App extends Component {
     }
     render() {
         return(
+            // <BrowserRouter>
             <div id="main">
             <Link to="/">HOME/</Link>
             <Link to="/about">ABOUT</Link>
             <Switch>
                 <Route exact path='/'>
+                    <LocationDisplay/>
                     <Home />
                 </Route>
                 <Route path='/about'>
+                <LocationDisplay/>
                     <About />
                 </Route>
                 <Route>
@@ -48,7 +51,7 @@ export default class App extends Component {
                 </Route>
             </Switch>
             </div>
-            
+            // </BrowserRouter>
         )
         
     }
