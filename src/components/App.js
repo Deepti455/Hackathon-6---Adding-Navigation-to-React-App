@@ -6,20 +6,20 @@ import {useLocation} from 'react-router-dom';
 import '../styles/App.css';
 // import NotFound from "./NotFound.js";
 
-function LocationDisplay(){
+export function LocationDisplay(){
     let location=useLocation();
     return <div data-testid="location-display">{location.pathname}</div>
 }
 export function Home(){
     return <>
-        {/* <LocationDisplay/> */}
+        <LocationDisplay/>
         <div style={{backgroundColor: 'orange', width: "100%", height: "500px"}}>You are home.</div>
         </>
 }
 export function About(){
     
     return <>
-        {/* <LocationDisplay/> */}
+        <LocationDisplay/>
         <div style={{backgroundColor: 'green', width: "100%", height: "500px"}}>You are on the about page.</div>
         </>
 }
@@ -39,11 +39,11 @@ export default class App extends Component {
             <Link to="/about">ABOUT</Link>
             <Switch>
                 <Route exact path='/'>
-                    <LocationDisplay/>
+                   
                     <Home />
                 </Route>
                 <Route path='/about'>
-                <LocationDisplay/>
+                
                     <About />
                 </Route>
                 <Route>
@@ -51,7 +51,7 @@ export default class App extends Component {
                 </Route>
             </Switch>
             </div>
-            // </BrowserRouter>
+            //  </BrowserRouter>
         )
         
     }
